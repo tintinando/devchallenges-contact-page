@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Be Vietnam';
+    src: url(assets/fonts/BeVietnamPro-Light.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Be Vietnam';
+    src: url(assets/fonts/BeVietnamPro-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Be Vietnam';
+    src: url(assets/fonts/BeVietnamPro-Bold.ttf);
+    font-weight: 700;
+}
+
+h2,
+h3 {
+    text-align: center;
+}
+
+
+h2 {
+    font-size: 64px;
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+body {
+    background: #cbd5e1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Be Vietnam", sans-serif;
+    color: white;
+    /* width: 3400px; */
+    /* height: 1800px; */
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 4rem;
+    max-width: 1280px;
+    max-height: 1280px;
+    background-image: url(assets/img/bg-image.svg);
+    background-repeat: no-repeat;
+}
+
+main header {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+form {
+    background: rgb(165, 94, 174);
+    background: linear-gradient(135deg, rgba(165, 94, 174, 1) 0%, rgba(62, 54, 163, 1) 100%);
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto auto;
+    max-width: 812px;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+label {
+    color: white;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+input,
+select,
+textarea,
+button {
+    background-color: white;
+    border-radius: 1rem;
+    border: none;
+}
+
+select,
+::placeholder {
+    color: #111729;
+    padding: 0 1rem;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+textarea::placeholder {
+    font-family: "Be vietnam";
+    padding: 1.5rem 1rem;
+}
+
+input,
+select {
+    width: 365px;
+    height: 70px;
+}
+
+textarea {
+    height: 210px;
+}
+
+button {
+    height: 70px;
+    font-size: 20px;
+    color: #4036A9;
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 1024px) {
+    main {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    main {
+        background-size: cover;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+        gap: unset;
+    }
+
+    input,
+    select {
+        width: 500px;
+    }
+
+    .span-2 {
+        grid-column: unset;
+    }
+
+}
